@@ -37,7 +37,7 @@ export default function Home() {
           <div className="signature">Cuidado individual <i/> desde 2007</div>
         </div>
         <div className="heroImage" role="img" aria-label="Dra. Lígia Moreira">
-          <Image src="https://ligiakelly.ntr.br/wp-content/uploads/2024/08/197A7120-3-scaled.jpeg" alt="Dra. Lígia Moreira, nutricionista" fill priority sizes="(max-width: 850px) 100vw, 44vw" />
+          <Image src="/ligia-moreira-hero.jpg" alt="Dra. Lígia Moreira, nutricionista" fill priority sizes="(max-width: 850px) 100vw, 44vw" />
           <div className="imageNote"><b>Nutrição é encontro.</b><span>Entre ciência, corpo e vida.</span></div>
         </div>
       </section>
