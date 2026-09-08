@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const whatsapp = "https://wa.me/5519989068692?text=Olá%20Dra.%20Lígia,%20gostaria%20de%20agendar%20uma%20consulta.";
 
 const specialties = [
@@ -17,7 +19,11 @@ export default function Home() {
   return (
     <main>
       <header className="nav">
-        <a className="brand" href="#inicio" aria-label="Início"><span>LM</span><div>Lígia Moreira<small>Nutricionista</small></div></a>
+        <a className="brand" href="#inicio" aria-label="Início">
+          {/* Substituir este monograma pelo logo oficial em SVG/PNG quando disponível. */}
+          <span className="brandMark" aria-hidden="true">LM</span>
+          <span className="brandName">Lígia Moreira<small>Nutricionista</small></span>
+        </a>
         <nav><a href="#sobre">Sobre</a><a href="#especialidades">Especialidades</a><a href="#depoimentos">Depoimentos</a></nav>
         <a className="navCta" href={whatsapp} target="_blank" rel="noreferrer">Agendar consulta</a>
       </header>
@@ -31,7 +37,7 @@ export default function Home() {
           <div className="signature">Cuidado individual <i/> desde 2007</div>
         </div>
         <div className="heroImage" role="img" aria-label="Dra. Lígia Moreira">
-          <img src="https://ligiakelly.ntr.br/wp-content/uploads/2024/08/197A7120-3-scaled.jpeg" alt="Dra. Lígia Moreira, nutricionista" />
+          <Image src="https://ligiakelly.ntr.br/wp-content/uploads/2024/08/197A7120-3-scaled.jpeg" alt="Dra. Lígia Moreira, nutricionista" fill priority sizes="(max-width: 850px) 100vw, 44vw" />
           <div className="imageNote"><b>Nutrição é encontro.</b><span>Entre ciência, corpo e vida.</span></div>
         </div>
       </section>
@@ -58,7 +64,7 @@ export default function Home() {
         <div className="address"><span>Consultório</span><p>Av. Dr. Hermas Braga, 540<br/>Nova Campinas — Campinas, SP<br/>13049-252</p><a href="https://maps.google.com/?q=Av.+Dr.+Hermas+Braga,+540,+Campinas,+SP" target="_blank" rel="noreferrer">Ver no mapa ↗</a><small>(19) 98906-8692</small></div>
       </section>
 
-      <footer className="footer"><div className="brand inverse"><span>LM</span><div>Lígia Moreira<small>Nutricionista</small></div></div><p>CRN e informações profissionais a inserir</p><p>© 2026 Lígia Moreira</p></footer>
+      <footer className="footer"><div className="brand inverse"><span className="brandMark" aria-hidden="true">LM</span><span className="brandName">Lígia Moreira<small>Nutricionista</small></span></div><p>CRN e informações profissionais a inserir</p><p>© 2026 Lígia Moreira</p></footer>
       <a className="whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Agendar pelo WhatsApp">✦</a>
     </main>
   );
