@@ -64,7 +64,7 @@ export default function Home() {
         <div className="address"><span>Consultório</span><p>Av. Dr. Hermas Braga, 540<br/>Nova Campinas — Campinas, SP<br/>13049-252</p><a href="https://maps.google.com/?q=Av.+Dr.+Hermas+Braga,+540,+Campinas,+SP" target="_blank" rel="noreferrer">Ver no mapa ↗</a><small>(19) 98906-8692</small></div>
       </section>
 
-      <footer className="footer"><div className="brand inverse"><span className="brandMark" aria-hidden="true">LM</span><span className="brandName">Lígia Moreira<small>Nutricionista</small></span></div><p>CRN e informações profissionais a inserir</p><p>© 2026 Lígia Moreira</p></footer>
+      <footer className="footer"><div className="brand inverse"><span className="brandMark" aria-hidden="true">LM</span><span className="brandName">Lígia Moreira<small>Nutricionista</small></span></div><p>CRN e informações profissionais a inserir!</p><p>© 2026 Lígia Moreira</p></footer>
       <a className="whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Agendar pelo WhatsApp">✦</a>
     </main>
   );
