@@ -100,6 +100,15 @@ a { transition: color .25s ease, background-color .25s ease, border-color .25s e
 .whatsapp { position: fixed; z-index: 5; right: 25px; bottom: 25px; width: 52px; height: 52px; border-radius: 50%; background: var(--sand); color: var(--brown); display: grid; place-items: center; text-decoration: none; font-size: 20px; box-shadow: 0 8px 30px rgba(74,59,50,.28); }
 .whatsapp:hover { background: var(--cream); transform: translateY(-3px); }
 
+.consentBanner { position: fixed; z-index: 30; left: 22px; right: 22px; bottom: 22px; display: flex; align-items: center; justify-content: space-between; gap: 28px; max-width: 960px; margin: 0 auto; padding: 20px 22px; color: var(--cream); background: #382d26; border: 1px solid rgba(246,237,219,.22); box-shadow: 0 16px 48px rgba(46,34,27,.28); }
+.consentBanner strong { display: block; font: 20px var(--display); margin-bottom: 7px; }
+.consentBanner p { max-width: 650px; margin: 0; font-size: 12px; line-height: 1.6; color: rgba(246,237,219,.82); }
+.consentActions { display: flex; gap: 10px; flex: 0 0 auto; }
+.consentActions button, .privacyPreferences { border: 0; font: 600 10px var(--sans); letter-spacing: 1.2px; text-transform: uppercase; cursor: pointer; }
+.consentAccept { padding: 13px 18px; background: var(--sand); color: var(--brown); }
+.consentReject { padding: 13px 18px; background: transparent; color: var(--cream); border: 1px solid rgba(246,237,219,.42) !important; }
+.privacyPreferences { position: fixed; z-index: 6; left: 18px; bottom: 16px; padding: 7px 10px; color: var(--taupe); background: rgba(255,250,241,.92); border: 1px solid var(--line); }
+
 @media (max-width: 850px) {
   .nav { height: 76px; }
   .nav nav, .navCta { display: none; }
@@ -126,6 +135,9 @@ a { transition: color .25s ease, background-color .25s ease, border-color .25s e
   .imageNote { left: 20px; right: 20px; bottom: 20px; }
   .intro h2, .sectionHead h2 { font-size: 42px; letter-spacing: -1.5px; }
   .contact h2 { font-size: 56px; }
+  .consentBanner { align-items: stretch; flex-direction: column; gap: 16px; left: 12px; right: 12px; bottom: 12px; }
+  .consentActions { width: 100%; }
+  .consentActions button { flex: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
