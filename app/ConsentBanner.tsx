@@ -32,7 +32,11 @@ export default function ConsentBanner() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    setIsOpen(localStorage.getItem(STORAGE_KEY) === null);
+    const timer = window.setTimeout(() => {
+      setIsOpen(localStorage.getItem(STORAGE_KEY) === null);
+    }, 0);
+
+    return () => window.clearTimeout(timer);
   }, []);
 
   function saveChoice(value: ConsentValue) {

@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ignore-pattern .next"
+    "lint": "eslint . --ignore-pattern .next --ignore-pattern dist"
   },
   "dependencies": {
     "next": "16.4.3",
@@ -25,6 +25,11 @@
     "eslint-config-next": "16.4.3",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.4"
+    }
   },
   "type": "module"
 }
