@@ -44,7 +44,13 @@ export default function Home() {
 
       <section className="intro" id="sobre">
         <div><p className="eyebrow">Sobre mim</p><h2>Uma escuta atenta para um cuidado <em>realmente seu.</em></h2></div>
-        <div className="bio"><p>Sou <strong>Lígia Moreira</strong>, nutricionista funcional integrativa desde 2007, formada pela UNIP e dedicada especialmente à saúde da mulher.</p><p>Com especialização em Geriatria pela Unicamp, pós-graduação em Nutrição Funcional pelo Instituto Valéria Pascoal e formação em Fertilidade Feminina, uno conhecimento clínico e acolhimento para construir caminhos possíveis — sem fórmulas prontas.</p><a href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="sobre">Converse comigo <span>→</span></a></div>
+        <div className="bio">
+          <p>Sou <strong>Lígia Moreira</strong>, nutricionista funcional integrativa desde 2007, com atuação especialmente dedicada à saúde da mulher.</p>
+          <p>Com especialização em Geriatria pela Unicamp, pós-graduação em Nutrição Funcional pelo Instituto Valéria Paschoal e formação em Nutrição de Precisão e Genética pelo Instituto de Medicina e Nutrição de Precisão (IMNP), integro conhecimento científico e experiência clínica para oferecer um cuidado individualizado.</p>
+          <p>Minha trajetória inclui aprimoramentos em modulação intestinal e microbiota, fertilidade feminina, saúde hormonal, nutrição aplicada à estética, procedimentos estéticos e recuperação pós-operatória.</p>
+          <p>Acredito que cada mulher possui uma história, um metabolismo e necessidades únicas. Por isso, meu trabalho vai além de protocolos prontos, com estratégias nutricionais personalizadas voltadas à saúde, ao bem-estar e à longevidade em cada fase da vida.</p>
+          <a href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="sobre">Converse comigo <span>→</span></a>
+        </div>
       </section>
 
       <section className="specialties" id="especialidades">
