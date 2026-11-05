@@ -24,7 +24,7 @@ export default function Home() {
           <span className="brandMark" aria-hidden="true">LM</span>
           <span className="brandName">Lígia Moreira<small>Nutricionista</small></span>
         </a>
-        <nav><a href="#sobre">Sobre</a><a href="#especialidades">Especialidades</a><a href="#depoimentos">Depoimentos</a></nav>
+        <nav><a href="#sobre">Sobre</a><a href="#especialidades">Especialidades</a><a href="#lipedema">Lipedema</a><a href="#depoimentos">Depoimentos</a></nav>
         <a className="navCta" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="menu">Agendar consulta</a>
       </header>
 
@@ -50,6 +50,30 @@ export default function Home() {
       <section className="specialties" id="especialidades">
         <div className="sectionHead"><p className="eyebrow">Como posso ajudar</p><h2>Nutrição para cada<br/><em>capítulo da sua vida.</em></h2></div>
         <div className="specialtyGrid">{specialties.map((item) => <article key={item.n}><span>{item.n}</span><h3>{item.title}</h3><p>{item.text}</p><i>↗</i></article>)}</div>
+      </section>
+
+
+      <section className="lipedema" id="lipedema" aria-labelledby="lipedema-title">
+        <div className="lipedemaIntro">
+          <p className="eyebrow">Nutrição especializada em lipedema</p>
+          <h2 id="lipedema-title">Suas pernas doem, pesam e fazem você <em>evitar roupas que gostaria de usar?</em></h2>
+          <p>Vestir um shorts, colocar uma saia mais curta ou ir à praia com mais confiança também importa. O desconforto com a aparência das pernas merece ser acolhido, assim como a dor e a sensação de peso.</p>
+          <h3>A nutrição precisa fazer parte do seu tratamento do lipedema.</h3>
+          <p>Meu acompanhamento une o cuidado com a saúde à atenção aos seus objetivos estéticos, com uma estratégia individualizada que considera quatro pilares:</p>
+        </div>
+        <div className="lipedemaGrid">
+          <article><span>01</span><h3>Inflamação e saúde metabólica</h3><p>Avaliação da alimentação, dos exames e do seu histórico para construir uma estratégia com foco anti-inflamatório, respeitando suas necessidades.</p></article>
+          <article><span>02</span><h3>Saúde intestinal e microbiota</h3><p>Atenção à constipação, aos gases, à distensão abdominal e à síndrome do intestino irritável. Seu conforto digestivo e a saúde da microbiota também entram no plano.</p></article>
+          <article><span>03</span><h3>Saúde vascular e inchaço</h3><p>Cuidado nutricional que considera o edema e a sensação de peso nas pernas, integrado aos demais profissionais do seu tratamento.</p></article>
+          <article><span>04</span><h3>Sensibilidades e tolerância alimentar</h3><p>Investigação da relação entre alimentos e sintomas, com ajustes direcionados quando necessários, sem restrições indiscriminadas.</p></article>
+        </div>
+        <div className="lipedemaClosing">
+          <h3>Mais conforto nas pernas. <em>Mais liberdade para se vestir.</em> Mais confiança para viver.</h3>
+          <p>O acompanhamento busca auxiliar no controle dos sintomas e na melhora da composição corporal, respeitando os limites e a resposta de cada organismo.</p>
+          <p>Agende sua consulta e dê o próximo passo no seu cuidado.</p>
+          <p className="lipedemaService">Atendimento presencial em Campinas e on-line para todo o Brasil e para quem mora no exterior.</p>
+          <a className="primary" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="lipedema">Quero agendar minha consulta <span>↗</span></a>
+        </div>
       </section>
 
       <section className="quoteBand"><span>“</span><p>A vida bem preenchida<br/>torna-se <em>longa.</em></p><small>— Sêneca</small></section>
