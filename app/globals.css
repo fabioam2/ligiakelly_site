@@ -144,3 +144,23 @@ a { transition: color .25s ease, background-color .25s ease, border-color .25s e
   html { scroll-behavior: auto; }
   a, .specialtyGrid article { transition: none; }
 }
+
+
+/* Lipedema: página inicial, seção de acompanhamento */
+.lipedema{padding:110px 7vw;background:var(--cream,#F6EDDB);color:var(--brown,#4A3B32)}
+.lipedemaIntro{max-width:920px;margin:0 auto 58px;text-align:center}
+.lipedemaIntro .eyebrow{color:var(--taupe,#816957)}
+.lipedemaIntro h2{font:400 clamp(38px,4.5vw,68px)/1.08 var(--display-font,Georgia,serif);letter-spacing:-1.5px;margin:0 0 30px}
+.lipedemaIntro h2 em,.lipedemaClosing h3 em{color:var(--taupe,#816957);font-weight:400}
+.lipedemaIntro p,.lipedemaClosing p{font:17px/1.8 var(--body-font,Arial,sans-serif);max-width:760px;margin:20px auto;color:var(--brown,#4A3B32)}
+.lipedemaIntro h3{font:400 clamp(25px,2.7vw,36px)/1.25 var(--display-font,Georgia,serif);margin:32px auto;max-width:760px}
+.lipedemaGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:1120px;margin:auto}
+.lipedemaGrid article{padding:36px;background:var(--paper,#fbf8f1);border:1px solid rgba(74,59,50,.15)}
+.lipedemaGrid article span{color:var(--taupe,#816957);font-size:12px;letter-spacing:2px}
+.lipedemaGrid h3{font:400 30px/1.15 var(--display-font,Georgia,serif);margin:20px 0}
+.lipedemaGrid p{font:15px/1.75 var(--body-font,Arial,sans-serif);margin:0}
+.lipedemaClosing{text-align:center;max-width:900px;margin:70px auto 0}
+.lipedemaClosing h3{font:400 clamp(35px,4vw,58px)/1.1 var(--display-font,Georgia,serif);margin:0 0 28px}
+.lipedemaClosing .lipedemaService{font-size:14px;margin:24px auto 32px}
+.lipedemaClosing .primary{background:var(--brown,#4A3B32);color:var(--cream,#F6EDDB)}
+@media(max-width:850px){.lipedema{padding:75px 7vw}.lipedemaIntro{text-align:left}.lipedemaGrid{grid-template-columns:1fr}.lipedemaGrid article{padding:28px}.lipedemaClosing{margin-top:55px}.lipedemaIntro h2{font-size:42px}}
