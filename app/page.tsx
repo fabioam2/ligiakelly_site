@@ -3,9 +3,9 @@ import Image from "next/image";
 const whatsapp = "https://wa.me/5519989068692?text=Olá%20Dra.%20Lígia,%20gostaria%20de%20agendar%20uma%20consulta.";
 
 const specialties = [
-  { n: "01", title: "Saúde hormonal", text: "Cuidado nutricional individualizado para as mudanças hormonais e metabólicas em cada fase da vida da mulher." },
+  { n: "01", title: "Saúde hormonal", text: "Cuidado nutricional individualizado para as mudanças hormonais e metabólicas em cada fase da vida da mulher.", href: "#saude-hormonal" },
   { n: "02", title: "Nutrição de precisão e teste genético", text: "A análise do teste genético contribui para personalizar estratégias nutricionais de acordo com suas características individuais.", href: "#teste-genetico" },
-  { n: "03", title: "Fertilidade feminina", text: "Estratégias alimentares individualizadas para apoiar seu caminho." },
+  { n: "03", title: "Fertilidade feminina", text: "Estratégias alimentares individualizadas para apoiar seu caminho.", href: "#fertilidade-feminina" },
   { n: "04", title: "Lipedema", text: "Cuidado nutricional individualizado para o conforto das pernas, a saúde metabólica e a qualidade de vida.", href: "#lipedema" },
 ];
 
@@ -49,10 +49,24 @@ export default function Home() {
 
       <section className="specialties" id="especialidades">
         <div className="sectionHead"><p className="eyebrow">Como posso ajudar</p><h2>Nutrição para cada<br/><em>capítulo da sua vida.</em></h2></div>
-        <div className="specialtyGrid">{specialties.map((item) => <article key={item.n}><span>{item.n}</span><h3>{item.title}</h3><p>{item.text}</p>{item.href ? <a href={item.href} aria-label="Conhecer os quatro pilares do acompanhamento nutricional para lipedema" className="specialtyJump"><span aria-hidden="true">↗</span><span className="sr-only">Ver os quatro pilares</span></a> : <i aria-hidden="true">↗</i>}</article>)}</div>
+        <div className="specialtyGrid">{specialties.map((item) => <a className="specialtyCard" key={item.n} href={item.href} aria-label={`Conhecer mais sobre ${item.title}`}><span>{item.n}</span><h3>{item.title}</h3><p>{item.text}</p><i aria-hidden="true">↗</i></a>)}</div>
       </section>
 
 
+
+
+      <section className="topicDetails" id="saude-hormonal" aria-labelledby="hormonal-title">
+        <p className="eyebrow">Saúde da mulher</p>
+        <h2 id="hormonal-title">Saúde <em>hormonal</em></h2>
+        <p>Um cuidado nutricional que considera as mudanças hormonais e metabólicas ao longo da vida da mulher, com atenção ao histórico clínico, aos sintomas, aos exames e aos objetivos individuais.</p>
+        <a className="primary" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="saude-hormonal">Agendar consulta <span>↗</span></a>
+      </section>
+      <section className="topicDetails topicDetailsAlt" id="fertilidade-feminina" aria-labelledby="fertilidade-title">
+        <p className="eyebrow">Cuidado individualizado</p>
+        <h2 id="fertilidade-title">Fertilidade <em>feminina</em></h2>
+        <p>Estratégias alimentares personalizadas para acompanhar a saúde nutricional da mulher que deseja engravidar, considerando sua rotina, seu histórico e suas necessidades específicas.</p>
+        <a className="primary" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="fertilidade">Agendar consulta <span>↗</span></a>
+      </section>
 
       <section className="genetics" id="teste-genetico" aria-labelledby="genetics-title">
         <div className="geneticsIntro">
