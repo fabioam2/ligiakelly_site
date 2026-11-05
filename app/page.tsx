@@ -4,9 +4,8 @@ const whatsapp = "https://wa.me/5519989068692?text=Olá%20Dra.%20Lígia,%20gosta
 
 const specialties = [
   { n: "01", title: "Saúde hormonal", text: "Cuidado nutricional individualizado para as mudanças hormonais e metabólicas em cada fase da vida da mulher." },
-  { n: "02", title: "Nutrição de precisão", text: "Estratégias nutricionais personalizadas com apoio de testes genéticos, considerando suas particularidades biológicas." },
+  { n: "02", title: "Nutrição de precisão e teste genético", text: "A análise do teste genético contribui para personalizar estratégias nutricionais de acordo com suas características individuais." },
   { n: "03", title: "Fertilidade feminina", text: "Estratégias alimentares individualizadas para apoiar seu caminho." },
-  ,
   { n: "04", title: "Lipedema", text: "Cuidado nutricional individualizado para o conforto das pernas, a saúde metabólica e a qualidade de vida.", href: "#lipedema" },
 ];
 
