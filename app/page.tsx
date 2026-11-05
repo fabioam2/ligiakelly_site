@@ -3,11 +3,11 @@ import Image from "next/image";
 const whatsapp = "https://wa.me/5519989068692?text=Olá%20Dra.%20Lígia,%20gostaria%20de%20agendar%20uma%20consulta.";
 
 const specialties = [
-  { n: "01", title: "Saúde da mulher", text: "Cuidado nutricional atento às diferentes fases da vida feminina." },
-  { n: "02", title: "Nutrição funcional", text: "Uma visão integrativa para compreender seu corpo e sua rotina." },
+  { n: "01", title: "Saúde hormonal", text: "Cuidado nutricional individualizado para as mudanças hormonais e metabólicas em cada fase da vida da mulher." },
+  { n: "02", title: "Nutrição de precisão", text: "Estratégias nutricionais personalizadas com apoio de testes genéticos, considerando suas particularidades biológicas." },
   { n: "03", title: "Fertilidade feminina", text: "Estratégias alimentares individualizadas para apoiar seu caminho." },
-  { n: "04", title: "Longevidade", text: "Nutrição para atravessar o tempo com mais autonomia e bem-estar." },
-  { n: "05", title: "Lipedema", text: "Cuidado nutricional individualizado para o conforto das pernas, a saúde metabólica e a qualidade de vida.", href: "#lipedema" },
+  ,
+  { n: "04", title: "Lipedema", text: "Cuidado nutricional individualizado para o conforto das pernas, a saúde metabólica e a qualidade de vida.", href: "#lipedema" },
 ];
 
 const testimonials = [
