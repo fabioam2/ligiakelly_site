@@ -4,7 +4,7 @@ const whatsapp = "https://wa.me/5519989068692?text=Olá%20Dra.%20Lígia,%20gosta
 
 const specialties = [
   { n: "01", title: "Saúde hormonal", text: "Cuidado nutricional individualizado para as mudanças hormonais e metabólicas em cada fase da vida da mulher." },
-  { n: "02", title: "Nutrição de precisão e teste genético", text: "A análise do teste genético contribui para personalizar estratégias nutricionais de acordo com suas características individuais." },
+  { n: "02", title: "Nutrição de precisão e teste genético", text: "A análise do teste genético contribui para personalizar estratégias nutricionais de acordo com suas características individuais.", href: "#teste-genetico" },
   { n: "03", title: "Fertilidade feminina", text: "Estratégias alimentares individualizadas para apoiar seu caminho." },
   { n: "04", title: "Lipedema", text: "Cuidado nutricional individualizado para o conforto das pernas, a saúde metabólica e a qualidade de vida.", href: "#lipedema" },
 ];
@@ -52,6 +52,38 @@ export default function Home() {
         <div className="specialtyGrid">{specialties.map((item) => <article key={item.n}><span>{item.n}</span><h3>{item.title}</h3><p>{item.text}</p>{item.href ? <a href={item.href} aria-label="Conhecer os quatro pilares do acompanhamento nutricional para lipedema" className="specialtyJump"><span aria-hidden="true">↗</span><span className="sr-only">Ver os quatro pilares</span></a> : <i aria-hidden="true">↗</i>}</article>)}</div>
       </section>
 
+
+
+      <section className="genetics" id="teste-genetico" aria-labelledby="genetics-title">
+        <div className="geneticsIntro">
+          <p className="eyebrow">Nutrição de precisão</p>
+          <h2 id="genetics-title">Teste Genético <em>Nutricional</em></h2>
+          <h3>Seu DNA revela informações que podem transformar a maneira como você cuida da sua saúde.</h3>
+          <p>Imagine descobrir o que seus genes podem revelar sobre seu metabolismo, suas necessidades nutricionais e suas predisposições de saúde.</p>
+          <p>Por que algumas pessoas apresentam maior facilidade para acumular gordura? Por que a cafeína pode ser bem tolerada por uns e prejudicar o sono de outros? Como seu organismo metaboliza o álcool, utiliza determinados nutrientes e responde ao exercício físico?</p>
+          <p className="geneticsEmphasis">As respostas podem estar, em parte, no seu DNA.</p>
+          <p>Por meio de uma análise genética com um relatório de aproximadamente 80 páginas, investigamos polimorfismos associados a diferentes aspectos do funcionamento do seu organismo:</p>
+        </div>
+        <div className="geneticsGrid">
+          <article><span>01</span><h3>Metabolismo e composição corporal</h3><p>Predisposições relacionadas ao gasto energético, armazenamento de gordura, fome, saciedade e resposta aos macronutrientes.</p></article>
+          <article><span>02</span><h3>Vitaminas e minerais</h3><p>Variantes genéticas que podem influenciar o metabolismo e a utilização de nutrientes essenciais.</p></article>
+          <article><span>03</span><h3>Detoxificação e estresse oxidativo</h3><p>Características de enzimas envolvidas na metabolização de substâncias e na proteção celular.</p></article>
+          <article><span>04</span><h3>Cafeína e álcool</h3><p>Predisposições relacionadas à velocidade de metabolização e à sensibilidade individual.</p></article>
+          <article><span>05</span><h3>Saúde cerebral e longevidade</h3><p>Marcadores associados à predisposição para condições neurodegenerativas, como Alzheimer e Parkinson, quando contemplados no painel.</p></article>
+          <article><span>06</span><h3>Saúde cardiovascular</h3><p>Variantes relacionadas a fatores de risco cardiovascular, incluindo predisposições associadas ao AVC.</p></article>
+          <article><span>07</span><h3>Desempenho físico</h3><p>Características genéticas relacionadas à força, resistência, recuperação muscular e resposta ao exercício.</p></article>
+        </div>
+        <div className="geneticsClosing">
+          <h3>Conhecer suas predisposições é uma oportunidade de agir <em>com mais estratégia.</em></h3>
+          <p>O diferencial não está apenas em receber um relatório genético, mas em transformar essas informações em decisões para sua saúde.</p>
+          <p>Na consulta, os resultados são interpretados em conjunto com seu histórico clínico, exames laboratoriais, sintomas e estilo de vida.</p>
+          <p>A partir dessa avaliação, desenvolvemos estratégias nutricionais e de suplementação mais individualizadas, direcionadas às suas necessidades e aos fatores de risco identificados.</p>
+          <p className="geneticsEmphasis">Seu DNA não determina seu destino. Mas conhecê-lo pode ajudar você a fazer escolhas mais conscientes para o futuro.</p>
+          <h3>Nutrição de precisão: <em>um cuidado tão individual quanto seu DNA.</em></h3>
+          <p>Agende sua avaliação genética com a Dra. Lígia e descubra como transformar informações sobre seus genes em estratégias personalizadas de saúde e longevidade.</p>
+          <a className="primary" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="teste-genetico">Quero agendar minha avaliação genética <span>↗</span></a>
+        </div>
+      </section>
 
       <section className="lipedema" id="lipedema" aria-labelledby="lipedema-title">
         <div className="lipedemaIntro">
