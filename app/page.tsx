@@ -7,6 +7,7 @@ const specialties = [
   { n: "02", title: "Nutrição funcional", text: "Uma visão integrativa para compreender seu corpo e sua rotina." },
   { n: "03", title: "Fertilidade feminina", text: "Estratégias alimentares individualizadas para apoiar seu caminho." },
   { n: "04", title: "Longevidade", text: "Nutrição para atravessar o tempo com mais autonomia e bem-estar." },
+  { n: "05", title: "Lipedema", text: "Cuidado nutricional individualizado para o conforto das pernas, a saúde metabólica e a qualidade de vida.", href: "#lipedema" },
 ];
 
 const testimonials = [
@@ -49,7 +50,7 @@ export default function Home() {
 
       <section className="specialties" id="especialidades">
         <div className="sectionHead"><p className="eyebrow">Como posso ajudar</p><h2>Nutrição para cada<br/><em>capítulo da sua vida.</em></h2></div>
-        <div className="specialtyGrid">{specialties.map((item) => <article key={item.n}><span>{item.n}</span><h3>{item.title}</h3><p>{item.text}</p><i>↗</i></article>)}</div>
+        <div className="specialtyGrid">{specialties.map((item) => <article key={item.n}><span>{item.n}</span><h3>{item.title}</h3><p>{item.text}</p>{item.href ? <a href={item.href} aria-label="Conhecer os quatro pilares do acompanhamento nutricional para lipedema" className="specialtyJump"><span aria-hidden="true">↗</span><span className="sr-only">Ver os quatro pilares</span></a> : <i aria-hidden="true">↗</i>}</article>)}</div>
       </section>
 
 
