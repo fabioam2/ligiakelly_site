@@ -164,3 +164,23 @@ a { transition: color .25s ease, background-color .25s ease, border-color .25s e
 .lipedemaClosing .lipedemaService{font-size:14px;margin:24px auto 32px}
 .lipedemaClosing .primary{background:var(--brown,#4A3B32);color:var(--cream,#F6EDDB)}
 @media(max-width:850px){.lipedema{padding:75px 7vw}.lipedemaIntro{text-align:left}.lipedemaGrid{grid-template-columns:1fr}.lipedemaGrid article{padding:28px}.lipedemaClosing{margin-top:55px}.lipedemaIntro h2{font-size:42px}}
+
+
+/* Seção de teste genético nutricional */
+.genetics{padding:110px 7vw;background:#fffaf2;color:#4A3B32;scroll-margin-top:80px}
+.geneticsIntro{max-width:900px;margin:0 auto 54px;text-align:center}
+.geneticsIntro h2{font:400 clamp(40px,5vw,72px)/1.08 Georgia,serif;margin:12px 0 28px}
+.geneticsIntro h2 em,.geneticsClosing h3 em{color:#816957;font-weight:400}
+.geneticsIntro h3,.geneticsClosing h3{font:400 clamp(28px,3vw,42px)/1.2 Georgia,serif;margin:28px auto}
+.geneticsIntro p,.geneticsClosing p{font-size:17px;line-height:1.8;max-width:780px;margin:18px auto}
+.geneticsEmphasis{font-weight:600}
+.geneticsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:1120px;margin:0 auto}
+.geneticsGrid article{background:#F6EDDB;padding:36px;border:1px solid rgba(74,59,50,.12)}
+.geneticsGrid article span{font-size:12px;letter-spacing:2px;color:#816957}
+.geneticsGrid h3{font:400 29px/1.2 Georgia,serif;margin:18px 0}
+.geneticsGrid p{font-size:15px;line-height:1.75;margin:0}
+.geneticsClosing{text-align:center;max-width:900px;margin:65px auto 0}
+.geneticsClosing .primary{background:#4A3B32;color:#F6EDDB;display:inline-flex;margin-top:22px}
+.specialtyJump{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:inherit;text-decoration:none}
+.specialtyJump:focus-visible{outline:2px solid #4A3B32;outline-offset:4px}
+@media(max-width:850px){.genetics{padding:75px 7vw}.geneticsIntro{text-align:left}.geneticsGrid{grid-template-columns:1fr}.geneticsGrid article{padding:28px}.geneticsClosing{margin-top:50px}}
