@@ -1,6 +1,5 @@
 import Image from "next/image";
-
-const whatsapp = "https://wa.me/5519989068692?text=Olá%20Dra.%20Lígia,%20gostaria%20de%20agendar%20uma%20consulta.";
+import WhatsAppLink from "./WhatsAppLink";
 
 const specialties = [
   { n: "01", title: "Saúde hormonal", text: "Cuidado nutricional individualizado para as mudanças hormonais e metabólicas em cada fase da vida da mulher.", href: "#saude-hormonal" },
@@ -25,7 +24,7 @@ export default function Home() {
           <span className="brandName">Lígia Moreira<small>Nutricionista</small></span>
         </a>
         <nav><a href="#sobre">Sobre</a><a href="#especialidades">Especialidades</a><a href="#lipedema">Lipedema</a><a href="#depoimentos">Depoimentos</a></nav>
-        <a className="navCta" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="menu">Agendar consulta</a>
+        <WhatsAppLink className="navCta" eventLocation="menu">Agendar consulta</WhatsAppLink>
       </header>
 
       <section className="hero" id="inicio">
@@ -33,7 +32,8 @@ export default function Home() {
           <p className="eyebrow">Nutrição funcional integrativa</p>
           <h1>Seu corpo muda.<br/><em>Seu cuidado também.</em></h1>
           <p className="lead">Nutrição especializada na saúde da mulher, com escuta, ciência e estratégias que respeitam a sua história.</p>
-          <div className="actions"><a className="primary" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="hero">Comece sua jornada <span>↗</span></a><a className="textLink" href="#sobre">Conheça meu trabalho ↓</a></div>
+          <div className="actions"><WhatsAppLink className="primary" eventLocation="hero">Comece sua jornada <span>↗</span></WhatsAppLink><a className="textLink" href="#sobre">Conheça meu trabalho ↓</a></div>
+          <p className="heroLocation">Atendimento presencial em Nova Campinas</p>
           <div className="signature">Cuidado individual <i/> desde 2007</div>
         </div>
         <div className="heroImage" role="img" aria-label="Dra. Lígia Moreira">
@@ -49,7 +49,7 @@ export default function Home() {
           <p>Com especialização em Geriatria pela Unicamp, pós-graduação em Nutrição Funcional pelo Instituto Valéria Paschoal e formação em Nutrição de Precisão e Genética pelo Instituto de Medicina e Nutrição de Precisão (IMNP), integro conhecimento científico e experiência clínica para oferecer um cuidado individualizado.</p>
           <p>Minha trajetória inclui aprimoramentos em modulação intestinal e microbiota, fertilidade feminina, saúde hormonal, nutrição aplicada à estética, procedimentos estéticos e recuperação pós-operatória.</p>
           <p>Acredito que cada mulher possui uma história, um metabolismo e necessidades únicas. Por isso, meu trabalho vai além de protocolos prontos, com estratégias nutricionais personalizadas voltadas à saúde, ao bem-estar e à longevidade em cada fase da vida.</p>
-          <a href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="sobre">Converse comigo <span>→</span></a>
+          <WhatsAppLink eventLocation="sobre">Converse comigo <span>→</span></WhatsAppLink>
         </div>
       </section>
 
@@ -65,13 +65,18 @@ export default function Home() {
         <p className="eyebrow">Saúde da mulher</p>
         <h2 id="hormonal-title">Saúde <em>hormonal</em></h2>
         <p>Um cuidado nutricional que considera as mudanças hormonais e metabólicas ao longo da vida da mulher, com atenção ao histórico clínico, aos sintomas, aos exames e aos objetivos individuais.</p>
-        <a className="primary" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="saude-hormonal">Agendar consulta <span>↗</span></a>
+        <WhatsAppLink className="primary" eventLocation="especialidade">Agendar consulta <span>↗</span></WhatsAppLink>
       </section>
       <section className="topicDetails topicDetailsAlt" id="fertilidade-feminina" aria-labelledby="fertilidade-title">
         <p className="eyebrow">Cuidado individualizado</p>
         <h2 id="fertilidade-title">Fertilidade <em>feminina</em></h2>
         <p>Estratégias alimentares personalizadas para acompanhar a saúde nutricional da mulher que deseja engravidar, considerando sua rotina, seu histórico e suas necessidades específicas.</p>
-        <a className="primary" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="fertilidade">Agendar consulta <span>↗</span></a>
+        <ol className="bookingSteps" aria-label="Como agendar o acompanhamento nutricional para fertilidade">
+          <li><span>01</span><div><strong>Entre em contato</strong><p>Clique em agendar e envie a mensagem pronta pelo WhatsApp.</p></div></li>
+          <li><span>02</span><div><strong>Combine o atendimento</strong><p>A equipe confirma a disponibilidade e orienta o agendamento.</p></div></li>
+          <li><span>03</span><div><strong>Consulta individualizada</strong><p>Seu histórico, sua rotina e seus objetivos orientam o acompanhamento nutricional.</p></div></li>
+        </ol>
+        <WhatsAppLink className="primary" messageKey="fertilidade" eventLocation="especialidade">Agendar consulta <span>↗</span></WhatsAppLink>
       </section>
 
       <section className="genetics" id="teste-genetico" aria-labelledby="genetics-title">
@@ -101,7 +106,12 @@ export default function Home() {
           <p className="geneticsEmphasis">Seu DNA não determina seu destino. Mas conhecê-lo pode ajudar você a fazer escolhas mais conscientes para o futuro.</p>
           <h3>Nutrição de precisão: <em>um cuidado tão individual quanto seu DNA.</em></h3>
           <p>Agende sua avaliação genética com a Dra. Lígia e descubra como transformar informações sobre seus genes em estratégias personalizadas de saúde e longevidade.</p>
-          <a className="primary" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="teste-genetico">Quero agendar minha avaliação genética <span>↗</span></a>
+          <ol className="bookingSteps" aria-label="Como agendar a avaliação de DNA">
+            <li><span>01</span><div><strong>Solicite informações</strong><p>Envie a mensagem pronta pelo WhatsApp para demonstrar seu interesse na avaliação.</p></div></li>
+            <li><span>02</span><div><strong>Combine o agendamento</strong><p>A equipe confirma a disponibilidade e explica como o atendimento é organizado.</p></div></li>
+            <li><span>03</span><div><strong>Avaliação individualizada</strong><p>As informações são interpretadas em conjunto com seu histórico, exames, sintomas e estilo de vida.</p></div></li>
+          </ol>
+          <WhatsAppLink className="primary" messageKey="dna" eventLocation="especialidade">Quero agendar minha avaliação genética <span>↗</span></WhatsAppLink>
         </div>
       </section>
 
@@ -123,8 +133,8 @@ export default function Home() {
           <h3>Mais conforto nas pernas. <em>Mais liberdade para se vestir.</em> Mais confiança para viver.</h3>
           <p>O acompanhamento busca auxiliar no controle dos sintomas e na melhora da composição corporal, respeitando os limites e a resposta de cada organismo.</p>
           <p>Agende sua consulta e dê o próximo passo no seu cuidado.</p>
-          <p className="lipedemaService">Atendimento presencial em Campinas e on-line para todo o Brasil e para quem mora no exterior.</p>
-          <a className="primary" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="lipedema">Quero agendar minha consulta <span>↗</span></a>
+          <p className="lipedemaService">Atendimento presencial em Nova Campinas e on-line para todo o Brasil e para quem mora no exterior.</p>
+          <WhatsAppLink className="primary" messageKey="lipedema" eventLocation="especialidade">Quero agendar minha consulta <span>↗</span></WhatsAppLink>
         </div>
       </section>
 
@@ -136,12 +146,12 @@ export default function Home() {
       </section>
 
       <section className="contact">
-        <div><p className="eyebrow">Seu próximo passo</p><h2>Vamos cuidar<br/>de você?</h2><p>Agende uma consulta e comece uma relação mais leve e consciente com a sua alimentação.</p><a className="primary light" href={whatsapp} target="_blank" rel="noreferrer" data-event="whatsapp_agendamento" data-event-location="contato">Agendar pelo WhatsApp <span>↗</span></a></div>
+        <div><p className="eyebrow">Seu próximo passo</p><h2>Vamos cuidar<br/>de você?</h2><p>Agende uma consulta e comece uma relação mais leve e consciente com a sua alimentação.</p><WhatsAppLink className="primary light" eventLocation="contato">Agendar pelo WhatsApp <span>↗</span></WhatsAppLink></div>
         <div className="address"><span>Consultório</span><p>Av. Dr. Hermas Braga, 540<br/>Nova Campinas — Campinas, SP<br/>13049-252</p><a href="https://maps.google.com/?q=Av.+Dr.+Hermas+Braga,+540,+Campinas,+SP" target="_blank" rel="noreferrer">Ver no mapa ↗</a><small>(19) 98906-8692</small></div>
       </section>
 
       <footer className="footer"><div className="brand inverse"><span className="brandMark" aria-hidden="true">LM</span><span className="brandName">Lígia Moreira<small>Nutricionista</small></span></div><p>CRN e informações profissionais a inserir</p><p>© 2026 Lígia Moreira</p></footer>
-      <a className="whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Agendar pelo WhatsApp" data-event="whatsapp_agendamento" data-event-location="flutuante"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.41 9.41 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.32 11.32 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.38h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.19-5.9-3.33-8.05z"/></svg></a>
+      <WhatsAppLink className="whatsapp" eventLocation="flutuante" ariaLabel="Agendar pelo WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.41 9.41 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47zm8.06-17.53A11.32 11.32 0 0 0 12.04.63C5.76.63.65 5.74.65 12.02c0 2.01.52 3.97 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.38h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.19-5.9-3.33-8.05z"/></svg></WhatsAppLink>
     </main>
   );
 }

@@ -43,6 +43,7 @@ a { transition: color .25s ease, background-color .25s ease, border-color .25s e
 .textLink { color: var(--cream); text-decoration: none; font-size: 11px; letter-spacing: .5px; border-bottom: 1px solid rgba(246, 237, 219, .42); padding-bottom: 6px; }
 .textLink:hover { color: var(--sand); border-color: var(--sand); }
 .signature { font: italic 14px var(--display); margin-top: 70px; color: var(--sand); display: flex; align-items: center; gap: 14px; }
+.heroLocation { margin: 22px 0 0; color: rgba(246, 237, 219, .82); font-size: 11px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; }
 .signature i { width: 50px; border-top: 1px solid var(--taupe); }
 .heroImage { position: relative; overflow: hidden; min-height: 760px; background: var(--stone); }
 .heroImage::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(74,59,50,.08), rgba(74,59,50,.24)); pointer-events: none; }
@@ -199,4 +200,10 @@ a { transition: color .25s ease, background-color .25s ease, border-color .25s e
 .topicDetails h2 em{color:var(--taupe);font-weight:400}
 .topicDetails p:not(.eyebrow){font:17px/1.8 var(--sans);max-width:740px;margin:0 auto 30px}
 .topicDetails .primary{background:var(--brown);color:var(--cream)}
+.bookingSteps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:900px;margin:32px auto 34px;padding:0;list-style:none;text-align:left}
+.bookingSteps li{display:flex;gap:14px;padding:20px;background:var(--white);border:1px solid var(--line)}
+.bookingSteps li>span{color:var(--taupe);font-size:11px;letter-spacing:1.5px}
+.bookingSteps strong{display:block;font:400 20px/1.2 var(--display);margin-bottom:8px}
+.bookingSteps li p{font:13px/1.6 var(--sans)!important;margin:0!important}
 @media(max-width:850px){.specialtyGrid .specialtyCard{min-height:210px}.topicDetails{padding:70px 7vw}}
+@media(max-width:850px){.bookingSteps{grid-template-columns:1fr}.bookingSteps li{padding:18px}}
